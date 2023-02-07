@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <title>My To Dos</title>
+</head>
+
+<body>
+  <h1 class="title">my to dos</h1>
+  <h1 class="date-header" id="date"></h1>
+  <div class="container">
+    <div class="to-do-list"></div>
+    <div class="add-task-container">
+        <form>
+            <input 
+                type="text" 
+                autocomplete="off"
+                class="new-todo-text"
+                id="new-todo" 
+                placeholder="add new to do">
+            <button class ="add-task-btn" id="add-task">+</button>
+        </form>
+    </div>
+    </div>
+
+    <img src="images/appa.png" class="image-container" id="image">
+    <div class="image-checkbox">
+        <input type="checkbox" id="remove-image-checkbox">
+        <label for="remove-image-checkbox">Take a Break Appa</label>
+    </div>
+
+  <template id="template">
+    <div class="task-container">
+      <i class="fa-solid fa-cloud"></i>
+      <textarea disabled></textarea>
+      <i class="fa-solid fa-check" id="deleteBtn"></i>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

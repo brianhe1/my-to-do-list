@@ -1,0 +1,149 @@
+/*main title*/
+.title {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 4rem;
+    color: #b89a6f;
+    margin: 0;
+    padding: 1.2rem 1rem 0rem 1rem;
+}
+/*date header*/
+.date-header {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #6f5a3d;
+    margin: 0;
+    padding: 0.25rem 1rem 1rem 1rem;
+}
+/* to do list container*/
+.container {
+    width: 55%;
+    background-color: #efe2c7;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto;
+}
+/*add new to do form*/
+form {
+    padding: 0rem 2rem 0rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+/* add task form text box*/
+.new-todo-text {
+    width: 60%;
+    text-align: center;
+    border: none;
+    background: white;
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+    opacity: 0.8;
+}
+/* add to do button (the +) */
+.add-task-btn {
+   cursor: pointer;
+   border: none;
+   background: none;
+   margin-left: 0.75rem;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #563b16;
+   opacity: 0.8;
+   transition: opacity 150ms ease-in, transform 150ms ease-in-out;
+}
+.add-task-btn:hover {
+   opacity: 1;
+   transform: scale(1.2);
+}
+/* to do list */
+.to-do-list {
+    display: flex;
+    flex-direction: column;
+}
+/* to do cloud icon */
+.to-do-list .task-container .fa-cloud {
+    color: white;
+    margin-right: 0.75rem;
+}
+/* to do check icon */
+.to-do-list .task-container .fa-check {
+    color: #563b16;
+    cursor: pointer;
+}
+/* to do text + complete button */
+.task-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+/* to do text*/
+.task-container textarea {
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    font-family: 'Roboto Mono', monospace;
+    color: #563b16;
+    width: 80%;
+    background-color: transparent;
+}
+/* image container */
+.image-container {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    pointer-events: none;
+    width: 40%;
+    animation: float 4s ease-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(25px);
+    }
+}
+
+/* image checkbox */
+.image-checkbox {
+    position: absolute;
+    bottom: 1rem; 
+    left: 1rem;
+    font-family:'Roboto Mono', monospace;
+    font-size: 0.75rem;
+    color: #563b16;
+}
+
+/* formatting when window size is small*/
+@media(max-width: 700px) {
+    .title {
+        font-size: 3.5rem;
+    }
+    .date-header {
+        font-size: 1rem;
+    }
+    .to-do-list {
+        gap: 0.25rem;
+    }
+    form {
+        width: 50%;
+    }
+    .add-task-container {
+        display: inline-flex;
+    }
+    .add-task-container input {
+        width: 325px;
+        text-align: center;
+    }
+    .image-checkbox {
+        display: none;
+    }
+    .image-container {
+        display: none;
+    }
+}
